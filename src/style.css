@@ -1,0 +1,53 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+*::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+
+body {
+  font-size: 12px;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  touch-action: auto;
+  background-color: #ebeef4;
+}
+#app {
+  height: 100%;
+}
+.hairline-border {
+  position: relative;
+}
+.hairline-border::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #d6dce8 !important;
+  width: 200%;
+  height: 200%;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+}
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
