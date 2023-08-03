@@ -59,13 +59,13 @@ export const delay = (time: number = 2000) => {
     }, time)
   })
 }
-const PRIVATE_KEY = process.env.REACT_APP_PRIVATE_KEY ?? ''
+const PRIVATE_KEY = process.env.VITE_APP_PRIVATE_KEY ?? ''
 
 // 传入post|get请求的参数,根据请求的类型,返回一个相应的默认参数
 export const defaultParams = (type: string, data: Record<string, any>) => {
   const lang = 'cn'
   const platform = 'Android'
-  const ver = process.env.REACT_APP_VERSION
+  const ver = process.env.VITE_APP_VERSION
   const timestamp = Math.round(new Date().getTime() / 1000)
   const key = PRIVATE_KEY
 

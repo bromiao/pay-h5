@@ -24,19 +24,19 @@ export default mergeConfig(
       // },
       proxy: {
         '/api': {
-          target: process.env.REACT_APP_API_URL,
+          target: process.env.VITE_APP_API_URL,
           changeOrigin: true,
           secure: true,
           pathRewrite: {
             '^/api': ''
           }
         },
-        [process.env.REACT_APP_STATIC_PATH]: {
-          target: process.env.REACT_APP_STATIC_URL,
+        [process.env.VITE_APP_STATIC_PATH]: {
+          target: process.env.VITE_APP_STATIC_URL,
           changeOrigin: true,
           secure: true,
           pathRewrite: {
-            [`^${process.env.REACT_APP_STATIC_PATH}`]: ''
+            [`^${process.env.VITE_APP_STATIC_PATH}`]: ''
           }
         }
       }
