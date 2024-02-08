@@ -1,17 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+  lang="en"
+  id="html"
+  style="font-size: 50px"
+>
   <head>
     <meta charset="UTF-8" />
     <link
       rel="icon"
-      type="image/svg+xml"
-      href="/vite.svg"
+      href=""
     />
+    <!-- 在 head 标签中添加 meta 标签，并设置 viewport-fit=cover 值 -->
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
     />
-    <title>Vite + Vue + TS</title>
+    <meta
+      http-equiv="pragram"
+      content="no-cache"
+    />
+    <meta
+      http-equiv="cache-control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta
+      http-equiv="expires"
+      content="0"
+    />
+    <title></title>
+    <script>
+      window.addEventListener('load', () => {
+        // console.log("opener", window.opener)
+        // console.log("parent", window.parent)
+        const navigator = window.navigator
+        const userAgent = navigator.userAgent
+        const normalizedUserAgent = userAgent.toLowerCase()
+        const standalone = navigator.standalone
+
+        const isIos =
+          /ip(ad|hone|od)/.test(normalizedUserAgent) ||
+          (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+        const isAndroid = /android/.test(normalizedUserAgent)
+        const isSafari = /safari/.test(normalizedUserAgent)
+        const isWebview =
+          (isAndroid && /; wv\)/.test(normalizedUserAgent)) || (isIos && !standalone && !isSafari)
+
+        // 存储当前环境标识
+        sessionStorage.setItem('isWebview', isWebview ? 1 : 0)
+
+        window.close = function () {
+          try {
+            localStorage.setItem('token', '')
+            localStorage.setItem('md5_pri', '')
+            if (isWebview) {
+              if (isAndroid && window.imgupcallbcak) {
+                return imgupcallbcak.exitWeb(
+                  JSON.stringify({ code: 0, img: '5555', title: '成功' })
+                )
+              }
+              if (isIos && window.webkit) {
+                return window.webkit.messageHandlers.callNativeAndSend.postMessage('exitWeb', '*')
+              }
+            } else {
+              if (window.parent) {
+                window.parent.postMessage('closeH5', '*')
+              }
+            }
+          } catch (e) {
+            console.log(e)
+          }
+        }
+      })
+    </script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://edis.esandcloud.com/efaceid/1.9.3/EsLivingDetection.1.9.3.css"
+    />
+    <script src="https://edis.esandcloud.com/libs/plupload.full.min.js"></script>
+    <script src="https://edis.esandcloud.com/efaceid/1.9.3/EsLivingDetection.min.1.9.3.js"></script>
   </head>
   <body>
     <div id="app"></div>
@@ -19,5 +86,111 @@
       type="module"
       src="/src/main.ts"
     ></script>
+    <script>
+      function mergeHrefParams() {
+        const { search, hash } = window.location
+        const searchParams = search.replace(/\?/, '')
+        // const hashParams = hash.match(/(?<=\?)\S+$/) || ['']
+        const hashParams = hash.split('?')[1] || ''
+        return searchParams + '&' + hashParams
+      }
+
+      function setRemUnit() {
+        const docEl = document.documentElement
+        const search = new URLSearchParams(mergeHrefParams())
+        const hs = search.get('hs') || ''
+        const isWebview = +sessionStorage.getItem('isWebview')
+        const isGuadan = (search.get('operation_verification') || '').includes('GUADAN')
+        const isLandscape = window.matchMedia('(orientation:landscape)').matches
+
+        const userWebSetFont = getComputedStyle(docEl, false)['fontSize']
+        const fontFactor = parseFloat(userWebSetFont) / 16
+
+        docEl.style.setProperty('--scale-factor', '1.0')
+        parseInt(docEl.style.fontSize) >= 50 && (docEl.style.fontSize = '50px')
+        if (hs == 'h' || (isWebview && isGuadan && isLandscape)) {
+          docEl.style.fontSize = window.innerWidth / 10 + 'px'
+
+          const docElFont = parseFloat(docEl.style.fontSize)
+          const userSetFont = parseFloat(userWebSetFont)
+          const scaleFactor = (docElFont / userSetFont).toFixed(1)
+
+          docEl.style.setProperty('--scale-factor', scaleFactor)
+          if (docElFont < userSetFont) {
+            document.querySelector(
+              '#app'
+            ).style.cssText = `transform: scale(${scaleFactor});transform-origin: 0 0;width: calc(1 / ${scaleFactor} * 100%);max-width: unset;height: calc(1 / ${scaleFactor} * 100vh);`
+          }
+        }
+      }
+
+      window.addEventListener('load', () => {
+        setRemUnit()
+        window.addEventListener('resize', setRemUnit, false)
+      })
+
+      // 移动端真机调试时打开，地址参数 ?vlog=1 开启 Vue-vConsole-devtools
+      window.addEventListener('load', async () => {
+        const loadVconsole = () => {
+          return new Promise(resolve => {
+            const vConsole = document.createElement('script')
+
+            vConsole.src = 'https://unpkg.com/vconsole/dist/vconsole.min.js'
+            vConsole.async = false
+
+            vConsole.onload = function () {
+              resolve(true)
+            }
+
+            document.head.appendChild(vConsole)
+          })
+        }
+
+        const loadVueVconsoleDevtools = () => {
+          return new Promise(resolve => {
+            const vueVconsoleDevtools = document.createElement('script')
+
+            vueVconsoleDevtools.src =
+              'https://cdn.jsdelivr.net/npm/vue-vconsole-devtools@1.0.5/dist/vue_plugin.js'
+            vueVconsoleDevtools.async = false
+
+            vueVconsoleDevtools.onload = function () {
+              const vConsole = window.vConsoleInstance
+                ? window.vConsoleInstance
+                : new window.VConsole()
+              const Devtools = window.vueVconsoleDevtools
+
+              Devtools.initPlugin(vConsole)
+              resolve(true)
+            }
+
+            document.head.appendChild(vueVconsoleDevtools)
+          })
+        }
+
+        const search = new URLSearchParams(window.top.location.search || window.top.location.hash)
+
+        const isVlog = search.get('vlog')
+        if (isVlog) {
+          await loadVconsole()
+          loadVueVconsoleDevtools()
+        }
+      })
+    </script>
+    <!-- <script src="https://unpkg.com/vconsole/dist/vconsole.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-vconsole-devtools@1.0.5/dist/vue_plugin.js"></script>
+    <script>
+      try {
+        var vConsole = new window.VConsole()
+        const Devtools = window.vueVconsoleDevtools
+        Devtools.initPlugin(vConsole)
+
+        setTimeout(() => {
+          console.log('顶级url', window.top.location.href)
+        })
+      } catch (err) {
+        console.error(err)
+      }
+    </script> -->
   </body>
 </html>

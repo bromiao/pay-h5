@@ -1,8 +1,12 @@
 import { mergeConfig, loadEnv } from 'vite'
 import baseConfig from './vite.config.base'
+import config from '../public/config_dev.json'
 
 const lifecycle = process.env.npm_lifecycle_event
 const isHttpsLifecycle = lifecycle === 'dev:https'
+const env = loadEnv(process.env.NODE_ENV, process.cwd())
+console.log('开发环境信息', env)
+const SERVE_URL = config.SERVE_URL
 
 export default mergeConfig(
   {
@@ -13,7 +17,8 @@ export default mergeConfig(
       fs: {
         strict: true // 文件读取必须是相对于根目录的绝对路径
       },
-      https: isHttpsLifecycle, // 开启https
+      https: true, // 开启https
+      // https: isHttpsLifecycle, // 开启https
       // proxy: {
       //   // capi 开头的请求代理到远程服务器
       //   '/capi': {
@@ -24,19 +29,25 @@ export default mergeConfig(
       // },
       proxy: {
         '/api': {
-          target: process.env.REACT_APP_API_URL,
+          target: SERVE_URL,
           changeOrigin: true,
           secure: true,
-          pathRewrite: {
-            '^/api': ''
-          }
+          ws: true, // 支持 websocket
+          rewrite: path => path.replace(/^\/api/, '') // 路径重写
         },
-        [process.env.REACT_APP_STATIC_PATH]: {
-          target: process.env.REACT_APP_STATIC_URL,
+        '/pay': {
+          target: SERVE_URL,
+          changeOrigin: true,
+          secure: true,
+          ws: true, // 支持 websocket
+          rewrite: path => path.replace(/^\/pay/, '') // 路径重写
+        },
+        [env.VITE_APP_STATIC_PATH]: {
+          target: env.VITE_APP_STATIC_URL,
           changeOrigin: true,
           secure: true,
           pathRewrite: {
-            [`^${process.env.REACT_APP_STATIC_PATH}`]: ''
+            [`^${env.VITE_APP_STATIC_PATH}`]: ''
           }
         }
       }

@@ -1,0 +1,111 @@
+.gdpay-alert {
+  position: fixed;
+
+  &.animation {
+    .gdpay-alert-main {
+      animation: slider-in-bottom .2s linear forwards;
+    }
+    .gdpay-alert-mask {
+      animation: fade-in .2s linear forwards;
+    }
+  }
+  &.leave {
+    .gdpay-alert-main {
+      animation: slider-out-bottom .2s linear forwards;
+    }
+    .gdpay-alert-mask {
+      animation: fade-out .2s linear forwards;
+    }
+  }
+}
+
+.gdpay-alert-main {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 320px;
+  padding: 30px 70px;
+  background: #fff;
+  border-radius: 20px;
+  z-index: 200;
+}
+
+.gdpay-alert-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.gdpay-alert-button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gdpay-alert-mask {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.gdpay-alert-button {
+  all: unset;
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 10px;
+  background: #777777;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+
+  &-primary {
+    background: #3e5bff;
+  }
+}
+
+@keyframes slider-in-bottom {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes slider-out-bottom {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

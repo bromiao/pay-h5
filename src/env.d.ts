@@ -1,5 +1,9 @@
 /// <reference types="vite/client" />
 
+interface Number {
+  toTruncFixed: (dig: number) => string
+}
+
 interface ImportMetaEnv {
   /** API 前缀 */
   readonly VITE_API_PREFIX: string
@@ -16,3 +20,12 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
+
+declare module '*.json' {
+  const value: any
+  export default value
+}
+
+declare module 'vue-vconsole-devtools'
+
+declare module 'lodash-es'

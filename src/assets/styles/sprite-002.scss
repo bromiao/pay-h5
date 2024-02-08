@@ -1,0 +1,103 @@
+$sprite002: "@/assets/images/sprite-002.png";
+$sprite-computed-factor: 0.7;
+$sprite-home-background-size: calc(168px * $sprite-computed-factor)
+  calc(410px * $sprite-computed-factor);
+
+.circle-arrow-top {
+  background: url($sprite002) calc(-0px * $sprite-computed-factor)
+    calc(-0px * $sprite-computed-factor) no-repeat;
+  width: calc(111px * $sprite-computed-factor);
+  height: calc(111px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.wechat-pay {
+  background: url($sprite002) calc(-0px * $sprite-computed-factor)
+    calc(-111px * $sprite-computed-factor) no-repeat;
+  width: calc(89px * $sprite-computed-factor);
+  height: calc(78px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.ali-pay-03 {
+  background: url($sprite002) calc(-89px * $sprite-computed-factor)
+    calc(-111px * $sprite-computed-factor) no-repeat;
+  width: calc(76px * $sprite-computed-factor);
+  height: calc(76px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.ali-pay {
+  background: url($sprite002) calc(-0px * $sprite-computed-factor)
+    calc(-189px * $sprite-computed-factor) no-repeat;
+  width: calc(76px * $sprite-computed-factor);
+  height: calc(76px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.szrmb {
+  background: url($sprite002) calc(-76px * $sprite-computed-factor)
+    calc(-189px * $sprite-computed-factor) no-repeat;
+  width: calc(76px * $sprite-computed-factor);
+  height: calc(76px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.wechat-pay-03 {
+  background: url($sprite002) calc(-0px * $sprite-computed-factor)
+    calc(-265px * $sprite-computed-factor) no-repeat;
+  width: calc(84px * $sprite-computed-factor);
+  height: calc(75px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.bank-card {
+  background: url($sprite002) calc(-0px * $sprite-computed-factor)
+    calc(-340px * $sprite-computed-factor) no-repeat;
+  width: calc(90px * $sprite-computed-factor);
+  height: calc(70px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.wechat-pay-02 {
+  background: url($sprite002) calc(-111px * $sprite-computed-factor)
+    calc(-0px * $sprite-computed-factor) no-repeat;
+  width: calc(48px * $sprite-computed-factor);
+  height: calc(42px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.ali-pay-02 {
+  background: url($sprite002) calc(-111px * $sprite-computed-factor)
+    calc(-42px * $sprite-computed-factor) no-repeat;
+  width: calc(39px * $sprite-computed-factor);
+  height: calc(40px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.edit-02 {
+  background: url($sprite002) calc(-84px * $sprite-computed-factor)
+    calc(-265px * $sprite-computed-factor) no-repeat;
+  width: calc(41px * $sprite-computed-factor);
+  height: calc(39px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.edit {
+  background: url($sprite002) calc(-125px * $sprite-computed-factor)
+    calc(-265px * $sprite-computed-factor) no-repeat;
+  width: calc(41px * $sprite-computed-factor);
+  height: calc(39px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.star-full {
+  background: url($sprite002) calc(-90px * $sprite-computed-factor)
+    calc(-340px * $sprite-computed-factor) no-repeat;
+  width: calc(39px * $sprite-computed-factor);
+  height: calc(38px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.star {
+  background: url($sprite002) calc(-129px * $sprite-computed-factor)
+    calc(-340px * $sprite-computed-factor) no-repeat;
+  width: calc(39px * $sprite-computed-factor);
+  height: calc(38px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.bank-card-02 {
+  background: url($sprite002) calc(-84px * $sprite-computed-factor)
+    calc(-304px * $sprite-computed-factor) no-repeat;
+  width: calc(46px * $sprite-computed-factor);
+  height: calc(36px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}

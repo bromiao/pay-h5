@@ -1,0 +1,130 @@
+$spritePoint: "@/assets/images/sprites-point.png";
+$sprite-computed-factor: 0.7;
+$sprite-point-background-size: calc(473px * 0.7) calc(455px * 0.7);
+
+.light-step {
+  background: url($spritePoint) calc(-0px * $sprite-computed-factor)
+    calc(-125px * $sprite-computed-factor) no-repeat;
+  width: calc(160px * $sprite-computed-factor);
+  height: calc(160px * $sprite-computed-factor);
+  background-size: $sprite-point-background-size;
+}
+.award-btn {
+  background: url($spritePoint) calc(-0px * $sprite-computed-factor)
+    calc(0px * $sprite-computed-factor) no-repeat;
+  width: calc(281px * $sprite-computed-factor);
+  height: calc(120px * $sprite-computed-factor);
+  background-size: $sprite-point-background-size;
+}
+.lucky-star {
+  background: url($spritePoint) calc(-382px * $sprite-computed-factor)
+    calc(-193px * $sprite-computed-factor) no-repeat;
+  width: calc(67px * $sprite-computed-factor);
+  height: calc(101px * $sprite-computed-factor);
+  background-size: $sprite-point-background-size;
+}
+.RMB-gold-box {
+  background: url($spritePoint) calc(-286px * $sprite-computed-factor)
+    calc(0px * $sprite-computed-factor) no-repeat;
+  width: calc(91px * $sprite-computed-factor);
+  height: calc(97px * $sprite-computed-factor);
+  background-size: $sprite-point-background-size;
+}
+.point-8 {
+  background: url($spritePoint) calc(-286px * $sprite-computed-factor)
+    calc(-102px * $sprite-computed-factor) no-repeat;
+  width: calc(88px * $sprite-computed-factor);
+  height: calc(94px * $sprite-computed-factor);
+  background-size: $sprite-point-background-size;
+}
+.RMB-silver-box {
+  background: url($spritePoint) calc(-382px * $sprite-computed-factor)
+    calc(-95px * $sprite-computed-factor) no-repeat;
+  width: calc(80px * $sprite-computed-factor);
+  height: calc(93px * $sprite-computed-factor);
+  background-size: $sprite-point-background-size;
+}
+.discount {
+  background: url($spritePoint) calc(-382px * $sprite-computed-factor)
+    calc(0px * $sprite-computed-factor) no-repeat;
+  width: calc(91px * $sprite-computed-factor);
+  height: calc(90px * $sprite-computed-factor);
+  background-size: $sprite-point-background-size;
+}
+.point-80 {
+  background: url($spritePoint) calc(-165px * $sprite-computed-factor)
+    calc(-125px * $sprite-computed-factor) no-repeat;
+  width: calc(104px * $sprite-computed-factor);
+  height: calc(90px * $sprite-computed-factor);
+  background-size: $sprite-point-background-size;
+}
+.point-50 {
+  background: url($spritePoint) calc(0px * $sprite-computed-factor)
+    calc(-290px * $sprite-computed-factor) no-repeat;
+  width: calc(103px * $sprite-computed-factor);
+  height: calc(85px * $sprite-computed-factor);
+  background-size: $sprite-point-background-size;
+}
+.point-10 {
+  background: url($spritePoint) calc(-212px * $sprite-computed-factor)
+    calc(-290px * $sprite-computed-factor) no-repeat;
+  width: calc(96px * $sprite-computed-factor);
+  height: calc(82px * $sprite-computed-factor);
+  background-size: $sprite-point-background-size;
+}
+.point-30 {
+  background: url($spritePoint) calc(-108px * $sprite-computed-factor)
+    calc(-290px * $sprite-computed-factor) no-repeat;
+  width: calc(99px * $sprite-computed-factor);
+  height: calc(82px * $sprite-computed-factor);
+  background-size: $sprite-point-background-size;
+}
+.RMB-4 {
+  background: url($spritePoint) calc(-0px * $sprite-computed-factor)
+    calc(-380px * $sprite-computed-factor) no-repeat;
+  width: calc(95px * $sprite-computed-factor);
+  height: calc(75px * $sprite-computed-factor);
+  background-size: $sprite-point-background-size;
+}
+.point-5 {
+  background: url($spritePoint) calc(-382px * $sprite-computed-factor)
+    calc(-299px * $sprite-computed-factor) no-repeat;
+  width: calc(91px * $sprite-computed-factor);
+  height: calc(73px * $sprite-computed-factor);
+  background-size: $sprite-point-background-size;
+}
+.RMB-3 {
+  background: url($spritePoint) calc(-286px * $sprite-computed-factor)
+    calc(-201px * $sprite-computed-factor) no-repeat;
+  width: calc(69px * $sprite-computed-factor);
+  height: calc(66px * $sprite-computed-factor);
+  background-size: $sprite-point-background-size;
+}
+.point-1 {
+  background: url($spritePoint) calc(-313px * $sprite-computed-factor)
+    calc(-290px * $sprite-computed-factor) no-repeat;
+  width: calc(59px * $sprite-computed-factor);
+  height: calc(65px * $sprite-computed-factor);
+  background-size: $sprite-point-background-size;
+}
+.RMB-1 {
+  background: url($spritePoint) calc(-100px * $sprite-computed-factor)
+    calc(-380px * $sprite-computed-factor) no-repeat;
+  width: calc(65px * $sprite-computed-factor);
+  height: calc(64px * $sprite-computed-factor);
+  background-size: $sprite-point-background-size;
+}
+.point-3 {
+  background: url($spritePoint) calc(-170px * $sprite-computed-factor)
+    calc(-380px * $sprite-computed-factor) no-repeat;
+  width: calc(69px * $sprite-computed-factor);
+  height: calc(54px * $sprite-computed-factor);
+  background-size: $sprite-point-background-size;
+}
+.received {
+  background: url($spritePoint) calc(-165px * $sprite-computed-factor)
+    calc(-220px * $sprite-computed-factor) no-repeat;
+  width: calc(79px * $sprite-computed-factor);
+  height: calc(53px * $sprite-computed-factor);
+  background-size: $sprite-point-background-size;
+}

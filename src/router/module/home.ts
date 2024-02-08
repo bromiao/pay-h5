@@ -1,4 +1,4 @@
-import App from '@/pages/Home/index.vue'
+// import App from '@/pages/Home/index.vue'
 
 const home = [
   {
@@ -8,30 +8,37 @@ const home = [
     children: [
       {
         path: '/index',
-        name: 'home',
+        name: 'Home',
         component: () => import(/* webpackChunkName: "home" */ '@/pages/Home/index.vue')
       },
       {
-        path: '/point',
-        name: 'point',
-        component: () => import(/* webpackChunkName: "point" */ '@/pages/Point/index.vue')
-      },
-      {
-        path: '/scan',
-        name: 'scan',
-        component: () => import(/* webpackChunkName: "scan" */ '@/pages/Scan/index.vue'),
-        meta: {}
+        path: '/sell-coin',
+        name: 'SellCoin',
+        component: () => import(/* webpackChunkName: "home" */ '@/pages/Crypto/sell.vue')
       },
       {
         path: '/order',
-        name: 'order',
+        name: 'Order',
         component: () => import(/* webpackChunkName: "order" */ '@/pages/Order/index.vue'),
         meta: {}
       },
       {
+        path: '/point',
+        name: 'Point',
+        component: () => import(/* webpackChunkName: "point" */ '@/pages/Point/index.vue')
+      },
+      {
         path: '/mine',
-        name: 'mine',
+        name: 'Mine',
         component: () => import(/* webpackChunkName: "mine" */ '@/pages/Mine/index.vue'),
+        meta: {
+          // requiresAuth: true, // 是否需要登录权限
+        }
+      },
+      {
+        path: '/scanQR',
+        name: 'scanQR',
+        component: () => import(/* webpackChunkName: "home" */ '@/pages/Other/scanQR.vue'),
         meta: {
           // requiresAuth: true, // 是否需要登录权限
         }

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body,
 #root {
@@ -26,28 +30,39 @@ body {
   touch-action: auto;
   background-color: #ebeef4;
 }
-#app {
-  height: 100%;
-}
 .hairline-border {
   position: relative;
 }
 .hairline-border::after {
-  content: "";
-  pointer-events: none;
   position: absolute;
-  left: 0;
-  top: 0;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
   border: 1px solid #d6dce8 !important;
-  width: 200%;
-  height: 200%;
-  -webkit-transform: scale(0.5);
   transform: scale(0.5);
-  -webkit-transform-origin: left top;
-  transform-origin: left top;
 }
 .ellipsis {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+:root {
+  --sprite-computed-factor: 0.7;
+  --sprite-home-background-size: calc(108px * 7 / 10) calc(730px * 7 / 10);
+  --sprite-point-background-size: calc(298px * 10 / 14) calc(622px * 10 / 14);
+  --sprite-mine-background-size: calc(2640px * 7 / 10) calc(150px * 7 / 10);
+}
+
+.session-expired-toast {
+  background: #fff !important;
+  color: #b0b2b8 !important;
+  width: 645px !important;
+  .van-toast__text {
+    margin-top: 40px !important;
+  }
 }

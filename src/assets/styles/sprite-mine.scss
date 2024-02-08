@@ -1,0 +1,163 @@
+$spriteMine: "@/assets/images/sprites-mine.png";
+$sprite-computed-factor: 0.7;
+
+@mixin sprite_mine($width, $height, $x, $y) {
+  background-image: url($spriteMine);
+  background-size: var(--sprite-mine-background-size);
+  width: calc($width * $sprite-computed-factor);
+  height: calc($height * $sprite-computed-factor);
+  background-position: calc($x * $sprite-computed-factor) calc($y * $sprite-computed-factor);
+}
+
+.sprite-mine {
+  background-image: url($spriteMine);
+  background-size: var(--sprite-mine-background-size);
+}
+
+.bank-card-icon {
+  background: url($spriteMine) -0px -0px no-repeat;
+  @include sprite_mine(56px, 44px, -0px, -0px);
+
+}
+
+.copy-link-icon {
+  background: url($spriteMine) -56px -0px no-repeat;
+  @include sprite_mine(83px, 65px, -56px, -0px);
+
+}
+
+.back-icon {
+  background: url($spriteMine) -139px -0px no-repeat;
+  @include sprite_mine(22px, 38px, -139px, -0px);
+
+}
+
+.avatar1 {
+  background: url($spriteMine) -161px -0px no-repeat;
+  @include sprite_mine(150px, 150px, -161px, -0px);
+
+}
+
+.check-icon {
+  background: url($spriteMine) -311px -0px no-repeat;
+  @include sprite_mine(56px, 56px, -311px, -0px);
+
+}
+
+.camera {
+  background: url($spriteMine) -367px -0px no-repeat;
+  @include sprite_mine(35px, 32px, -367px, -0px);
+
+}
+
+.about-icon {
+  background: url($spriteMine) -402px -0px no-repeat;
+  @include sprite_mine(56px, 56px, -402px, -0px);
+
+}
+
+.chervon-right {
+  background: url($spriteMine) -458px -0px no-repeat;
+  @include sprite_mine(13px, 23px, -458px, -0px);
+
+}
+
+.close-icon {
+  background: url($spriteMine) -471px -0px no-repeat;
+  @include sprite_mine(28px, 28px, -471px, -0px);
+
+}
+
+.alipay-icon {
+  background: url($spriteMine) -499px -0px no-repeat;
+  @include sprite_mine(56px, 57px, -499px, -0px);
+
+}
+
+.css_sprites_mine {
+  background: url($spriteMine) -555px -0px no-repeat;
+  @include sprite_mine(1245px, 111px, -555px, -0px);
+
+}
+
+.customer_service {
+  background: url($spriteMine) -1800px -0px no-repeat;
+  @include sprite_mine(54px, 48px, -1800px, -0px);
+
+}
+
+.upload-img-icon {
+  background: url($spriteMine) -1854px -0px no-repeat;
+  @include sprite_mine(111px, 111px, -1854px, -0px);
+
+}
+
+.verify-icon {
+  //  background: url($spriteMine) -1965px -0px no-repeat;
+  @include sprite_mine(56px, 40px, -1965px, -0px);
+}
+
+.white-chervon-right {
+  background: url($spriteMine) -2021px -0px no-repeat;
+  @include sprite_mine(13px, 23px, -2021px, -0px);
+}
+
+.wechat-icon {
+  background: url($spriteMine) -2034px -0px no-repeat;
+  @include sprite_mine(56px, 49px, -2034px, -0px);
+}
+
+.device-icon {
+  background: url($spriteMine) -2090px -0px no-repeat;
+  @include sprite_mine(40px, 56px, -2090px, -0px);
+}
+
+.lock-icon {
+  background: url($spriteMine) -2130px -0px no-repeat;
+  @include sprite_mine(40px, 44px, -2130px, -0px);
+}
+
+.notice {
+  background: url($spriteMine) -2170px -0px no-repeat;
+  @include sprite_mine(43px, 48px, -2170px, -0px);
+}
+
+.save-image-icon {
+  background: url($spriteMine) -2213px -0px no-repeat;
+  @include sprite_mine(83px, 65px, -2213px, -0px);
+}
+
+.share-icon {
+  background: url($spriteMine) -2296px -0px no-repeat;
+  @include sprite_mine(40px, 58px, -2296px, -0px);
+}
+
+.more-icon {
+  background: url($spriteMine) -2336px -0px no-repeat;
+  @include sprite_mine(81px, 18px, -2336px, -0px);
+}
+
+.white-back {
+  background: url($spriteMine) -2417px -0px no-repeat;
+  @include sprite_mine(22px, 38px, -2417px, -0px);
+}
+
+.edit {
+  background: url($spriteMine) -2439px -0px no-repeat;
+  @include sprite_mine(46px, 46px, -2439px, -0px);
+}
+
+.shield-icon {
+  background: url($spriteMine) -2485px -0px no-repeat;
+  @include sprite_mine(51px, 59px, -2485px, -0px);
+}
+
+.email-icon {
+  background: url($spriteMine) -2536px -0px no-repeat;
+  @include sprite_mine(56px, 56px, -2536px, -0px);
+}
+
+.help {
+  background: url($spriteMine) -2592px -0px no-repeat;
+  @include sprite_mine(48px, 48px, -2592px, -0px);
+}

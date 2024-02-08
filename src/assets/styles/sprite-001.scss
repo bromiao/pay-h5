@@ -1,0 +1,164 @@
+$sprite-computed-factor: 0.7;
+$sprite-home-background-size: calc(201px * $sprite-computed-factor)
+  calc(252px * $sprite-computed-factor);
+.copy-01 {
+  background: var(--app-color-sprite-001) calc(-40px * $sprite-computed-factor)
+    calc(-211px * $sprite-computed-factor) no-repeat;
+  width: calc(38px * $sprite-computed-factor);
+  height: calc(37px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.customer-service-blue {
+  background: var(--app-color-sprite-001) calc(-0px * $sprite-computed-factor)
+    calc(-0px * $sprite-computed-factor) no-repeat;
+  width: calc(58px * $sprite-computed-factor);
+  height: calc(59px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.about-us {
+  background: var(--app-color-sprite-001) calc(-58px * $sprite-computed-factor)
+    calc(-0px * $sprite-computed-factor) no-repeat;
+  width: calc(57px * $sprite-computed-factor);
+  height: calc(57px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.mine-icon-active {
+  background: var(--app-color-sprite-001) calc(-115px * $sprite-computed-factor)
+    calc(-0px * $sprite-computed-factor) no-repeat;
+  width: calc(43px * $sprite-computed-factor);
+  height: calc(52px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.help-center {
+  background: var(--app-color-sprite-001) calc(-0px * $sprite-computed-factor)
+    calc(-59px * $sprite-computed-factor) no-repeat;
+  width: calc(57px * $sprite-computed-factor);
+  height: calc(52px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.mine-icon {
+  background: var(--app-color-sprite-001) calc(-158px * $sprite-computed-factor)
+    calc(-0px * $sprite-computed-factor) no-repeat;
+  width: calc(43px * $sprite-computed-factor);
+  height: calc(51px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.buy-coin {
+  background: var(--app-color-sprite-001) calc(-57px * $sprite-computed-factor)
+    calc(-59px * $sprite-computed-factor) no-repeat;
+  width: calc(48px * $sprite-computed-factor);
+  height: calc(51px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.sell-coin {
+  background: var(--app-color-sprite-001) calc(-105px * $sprite-computed-factor)
+    calc(-59px * $sprite-computed-factor) no-repeat;
+  width: calc(48px * $sprite-computed-factor);
+  height: calc(51px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.sell-coin-active {
+  background: var(--app-color-sprite-001) calc(-153px * $sprite-computed-factor)
+    calc(-59px * $sprite-computed-factor) no-repeat;
+  width: calc(48px * $sprite-computed-factor);
+  height: calc(51px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.order-active {
+  background: var(--app-color-sprite-001) calc(-0px * $sprite-computed-factor)
+    calc(-111px * $sprite-computed-factor) no-repeat;
+  width: calc(41px * $sprite-computed-factor);
+  height: calc(50px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.point-active {
+  background: var(--app-color-sprite-001) calc(-41px * $sprite-computed-factor)
+    calc(-111px * $sprite-computed-factor) no-repeat;
+  width: calc(41px * $sprite-computed-factor);
+  height: calc(50px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.point {
+  background: var(--app-color-sprite-001) calc(-82px * $sprite-computed-factor)
+    calc(-111px * $sprite-computed-factor) no-repeat;
+  width: calc(42px * $sprite-computed-factor);
+  height: calc(50px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.order {
+  background: var(--app-color-sprite-001) calc(-124px * $sprite-computed-factor)
+    calc(-111px * $sprite-computed-factor) no-repeat;
+  width: calc(42px * $sprite-computed-factor);
+  height: calc(50px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.buy-coin-active {
+  background: var(--app-color-sprite-001) calc(-0px * $sprite-computed-factor)
+    calc(-161px * $sprite-computed-factor) no-repeat;
+  width: calc(47px * $sprite-computed-factor);
+  height: calc(50px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.icon-ok-01 {
+  background: var(--app-color-sprite-001) calc(-47px * $sprite-computed-factor)
+    calc(-161px * $sprite-computed-factor) no-repeat;
+  width: calc(41px * $sprite-computed-factor);
+  height: calc(48px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.icon-choose-datetime {
+  background: var(--app-color-sprite-001) calc(-88px * $sprite-computed-factor)
+    calc(-161px * $sprite-computed-factor) no-repeat;
+  width: calc(43px * $sprite-computed-factor);
+  height: calc(47px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.message-03 {
+  background: var(--app-color-sprite-001) calc(-131px * $sprite-computed-factor)
+    calc(-161px * $sprite-computed-factor) no-repeat;
+  width: calc(58px * $sprite-computed-factor);
+  height: calc(47px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.customer-service-02 {
+  background: var(--app-color-sprite-001) calc(-0px * $sprite-computed-factor)
+    calc(-211px * $sprite-computed-factor) no-repeat;
+  width: calc(40px * $sprite-computed-factor);
+  height: calc(41px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.copy-01 {
+  background: var(--app-color-sprite-001) calc(-40px * $sprite-computed-factor)
+    calc(-211px * $sprite-computed-factor) no-repeat;
+  width: calc(38px * $sprite-computed-factor);
+  height: calc(37px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.wallet {
+  background: var(--app-color-sprite-001) calc(-78px * $sprite-computed-factor)
+    calc(-211px * $sprite-computed-factor) no-repeat;
+  width: calc(40px * $sprite-computed-factor);
+  height: calc(37px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.copy {
+  background: var(--app-color-sprite-001) calc(-166px * $sprite-computed-factor)
+    calc(-111px * $sprite-computed-factor) no-repeat;
+  width: calc(35px * $sprite-computed-factor);
+  height: calc(35px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.message-02 {
+  background: var(--app-color-sprite-001) calc(-118px * $sprite-computed-factor)
+    calc(-211px * $sprite-computed-factor) no-repeat;
+  width: calc(40px * $sprite-computed-factor);
+  height: calc(32px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.filter {
+  background: var(--app-color-sprite-001) calc(-158px * $sprite-computed-factor)
+    calc(-211px * $sprite-computed-factor) no-repeat;
+  width: calc(30px * $sprite-computed-factor);
+  height: calc(31px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}

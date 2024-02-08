@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+  <meta charset="UTF-8" />
+  <title>GDpay - 兑换</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+  />
+</head>
+<body>
+  <div class="exchange-container">
+    <div class="mini-wallet">
+      <img alt="logo" src="../assets/images/brand-logo.png" class="mini-wallet__icon" />
+      <div class="mini-wallet__content">
+        <div class="mini-wallet__label">
+          GDpay地址：
+        </div>
+        <div class="mini-wallet__address">
+          830ae912774oe2w212w
+        </div>
+      </div>
+      <div class="mini-wallet__extra">
+        <button class="mini-wallet-button">
+          进入钱包
+        </button>
+      </div>
+    </div>
+    <section class="main-content">
+      <div class="main-content__header">
+        <label>充值金额：</label>
+        <strong class="deposit-amount">15.03</strong>
+        <label>还需：</label>
+        <strong class="target-amount">0.99</strong>
+        <label>流水即可提现</label>
+      </div>
+      <div class="main-content__fill">
+        <label class="main-content__fill__label">
+          兑换规则：流水必须>=充值金额的1倍，方可进行兑换。
+        </label>
+        <div class="main-content__fill__input">
+          <input id="amount-filed" />
+        </div>
+      </div>
+      <div class="slider-wrapper">
+        <div class="slider-label">
+          <label id="slider-label-min" class="slider-label__min"></label>
+          <label id="slider-label-max" class="slider-label__max"></label>
+        </div>
+        <div id="slider"></div>
+        <button class="max-button" id="max-button">最大</button>
+      </div>
+      <div class="submit-button">
+        <button id="submit-button">兑换</button>
+      </div>
+    </section>
+  </div>
+<script
+  type="module"
+  src="/hybrid/exchange/index.ts"
+></script>
+</body>
+</html>

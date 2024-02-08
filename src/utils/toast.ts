@@ -1,4 +1,5 @@
 import logo from '@/assets/images/logo.png'
+import loading from 'vant/lib/loading'
 
 export default class Toast {
   private static toast: HTMLElement
@@ -259,7 +260,6 @@ export class Loading {
       child.className = `rect${i + 1}`
       div.appendChild(child)
     }
-
     mask.appendChild(div)
     document.body.appendChild(mask)
     this.dom = mask

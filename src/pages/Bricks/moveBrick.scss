@@ -1,0 +1,171 @@
+$spriteHome: "@/assets/images/sprites-home.png";
+$sprite-computed-factor: 0.9;
+$sprite-home-background-size: calc(108px * $sprite-computed-factor)
+  calc(730px * $sprite-computed-factor);
+.banzhuan_m {
+  background-image: url($spriteHome);
+  background-position: calc(-0px * $sprite-computed-factor) calc(-571px * $sprite-computed-factor);
+  width: calc(51px * $sprite-computed-factor);
+  height: calc(45px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+  display: inline-block;
+  position: relative;
+  top: 10px;
+  left: 6px;
+  // border-radius: 50%;
+  // background-color: #ff9e2a;
+}
+.banzhuan_wrap {
+  background: #ff9e2a;
+  border-radius: 50%;
+  width: 62px;
+  height: 62px;
+  display: inline-block;
+}
+.wrap_coins {
+  border-radius: 13.89px;
+  overflow: hidden;
+}
+.moveBrick {
+  height: 100%;
+  .nav-bar {
+    padding-bottom: 20px;
+  }
+  .blue-top-container {
+    width: 100%;
+    height: 20px;
+    background-color: var(--van-button-primary-background);
+  }
+  .content {
+    overflow: hidden;
+    font-size: 27.78px;
+    color: #13161b;
+    width: 750px;
+    height: 100%;
+    // height: calc(100vh - 60px);
+    // background-image: linear-gradient(#ebf1f6, #ebf1f6), linear-gradient(#ffffff, #ffffff);
+    background-blend-mode: normal, normal;
+    border-radius: 20.83px 20.83px 0px 0px;
+    margin-top: -20px;
+    padding: 20px 20px 0;
+    .MinerCoin {
+      width: 708.33px;
+      height: 192.36px;
+      background-color: #ffffff;
+      // border-radius: 13.89px;
+      .m_dow {
+        .right {
+          .van-button {
+            width: 125px;
+            height: 52.78px !important;
+            background-color: var(--van-button-primary-background);
+            border-radius: 6.94px;
+            padding: 10px 0;
+            font-size: 27.78px;
+          }
+        }
+      }
+    }
+    .usdt_ct {
+      width: 708.33px;
+      height: 192.36px;
+      background-color: #ffffff;
+      // border-radius: 13.89px;
+      .van-button {
+        width: 125px;
+        height: 52.78px !important;
+        background-color: var(--van-button-primary-background);
+        border-radius: 6.94px;
+        padding: 10px 0;
+        font-size: 27.78px;
+        :deep(.van-button__icon) {
+          .van-icon__image {
+            width: 20px;
+          }
+        }
+      }
+    }
+    .moveBrick_top {
+      width: 708.33px;
+      height: 192.36px;
+      // border-radius: 13.89px;
+      background-color: #ffffff;
+      .wrap_dow {
+        .text {
+          position: relative;
+          display: block;
+          width: 25%;
+        }
+        .right_shu {
+          width: 0.5px;
+          height: 40%;
+          position: absolute;
+          right: 0;
+          top: 30%;
+          background: #d7d6d6;
+        }
+      }
+    }
+
+    .list_coins {
+      width: 708.33px;
+      overflow: hidden;
+      :deep(.van-tabs__wrap) {
+        height: 80px;
+        .van-tabs__nav {
+          background: #f6fbff;
+          .van-tab {
+            padding: 0;
+            .van-tab__text {
+              font-size: 24px;
+            }
+            .van-badge {
+              top: 2px;
+            }
+          }
+        }
+        .van-tabs__line {
+          width: 40px;
+        }
+        .van-tab--active {
+          color: #2776ba;
+        }
+      }
+      .borderb {
+        border-bottom: 1px #d8dfea solid;
+      }
+      :deep(.van-list__finished-text) {
+        height: 50px;
+        line-height: 50px;
+      }
+    }
+  }
+  .ml_20 {
+    margin-left: 20px !important;
+  }
+  .m-rotate-90 {
+    :deep(.van-button__icon) {
+      transform: rotate(90deg);
+    }
+  }
+  .no-data {
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 120px;
+
+    img {
+      width: 180px;
+      height: 130px;
+      margin: 0 auto 20px;
+      // height: 110px;
+    }
+
+    .text-no-data {
+      width: 100%;
+      margin-bottom: 22px;
+      color: #999;
+      font-size: 28px;
+      text-align: center;
+    }
+  }
+}

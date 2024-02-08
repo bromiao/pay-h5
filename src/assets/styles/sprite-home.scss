@@ -1,0 +1,257 @@
+$spriteHome: "@/assets/images/sprites-home.png";
+$sprite-computed-factor: 0.7;
+$sprite-home-background-size: calc(108px * 7 / 10) calc(730px * 7 / 10);
+
+.mobile {
+  background: url($spriteHome) calc(-0px * $sprite-computed-factor)
+    calc(-0px * $sprite-computed-factor) no-repeat;
+  width: calc(41px * $sprite-computed-factor);
+  height: calc(64px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.lock {
+  background: url($spriteHome) calc(-41px * $sprite-computed-factor)
+    calc(-0px * $sprite-computed-factor) no-repeat;
+  width: calc(49px * $sprite-computed-factor);
+  height: calc(64px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.logo {
+  background: url($spriteHome) calc(-0px * $sprite-computed-factor)
+    calc(-64px * $sprite-computed-factor) no-repeat;
+  width: calc(64px * $sprite-computed-factor);
+  height: calc(56px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.message {
+  background: url($spriteHome) calc(-0px * $sprite-computed-factor)
+    calc(-120px * $sprite-computed-factor) no-repeat;
+  width: calc(54px * $sprite-computed-factor);
+  height: calc(54px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.tabbar-home-active {
+  background: url($spriteHome) calc(-54px * $sprite-computed-factor)
+    calc(-120px * $sprite-computed-factor) no-repeat;
+  width: calc(54px * $sprite-computed-factor);
+  height: calc(54px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.tabbar-home {
+  // $sprite-computed-factor: calc(34 / 54);
+  background: url($spriteHome) calc(-0px * $sprite-computed-factor)
+    calc(-174px * $sprite-computed-factor) no-repeat;
+  width: calc(54px * $sprite-computed-factor);
+  height: calc(54px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.tabbar-mine-active {
+  background: url($spriteHome) calc(-54px * $sprite-computed-factor)
+    calc(-174px * $sprite-computed-factor) no-repeat;
+  width: calc(54px * $sprite-computed-factor);
+  height: calc(54px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.tabbar-order-active {
+  background: url($spriteHome) calc(-0px * $sprite-computed-factor)
+    calc(-228px * $sprite-computed-factor) no-repeat;
+  width: calc(54px * $sprite-computed-factor);
+  height: calc(54px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.tabbar-points-active {
+  background: url($spriteHome) calc(-54px * $sprite-computed-factor)
+    calc(-228px * $sprite-computed-factor) no-repeat;
+  width: calc(54px * $sprite-computed-factor);
+  height: calc(54px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.radio-checked {
+  background: url($spriteHome) calc(-0px * $sprite-computed-factor)
+    calc(-282px * $sprite-computed-factor) no-repeat;
+  width: calc(50px * $sprite-computed-factor);
+  height: calc(50px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.verified {
+  background: url($spriteHome) calc(-50px * $sprite-computed-factor)
+    calc(-282px * $sprite-computed-factor) no-repeat;
+  width: calc(50px * $sprite-computed-factor);
+  height: calc(50px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.help {
+  background: url($spriteHome) calc(-0px * $sprite-computed-factor)
+    calc(-332px * $sprite-computed-factor) no-repeat;
+  width: calc(48px * $sprite-computed-factor);
+  height: calc(48px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.tabbar-mine {
+  background: url($spriteHome) calc(-48px * $sprite-computed-factor)
+    calc(-332px * $sprite-computed-factor) no-repeat;
+  width: calc(48px * $sprite-computed-factor);
+  height: calc(48px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.tabbar-order {
+  background: url($spriteHome) calc(-0px * $sprite-computed-factor)
+    calc(-380px * $sprite-computed-factor) no-repeat;
+  width: calc(48px * $sprite-computed-factor);
+  height: calc(48px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.tabbar-points {
+  background: url($spriteHome) calc(-48px * $sprite-computed-factor)
+    calc(-380px * $sprite-computed-factor) no-repeat;
+  width: calc(53px * $sprite-computed-factor);
+  height: calc(48px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.customer-service-dark {
+  background: url($spriteHome) calc(-0px * $sprite-computed-factor)
+    calc(-428px * $sprite-computed-factor) no-repeat;
+  width: calc(54px * $sprite-computed-factor);
+  height: calc(48px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.customer-service {
+  background: url($spriteHome) calc(-54px * $sprite-computed-factor)
+    calc(-428px * $sprite-computed-factor) no-repeat;
+  width: calc(54px * $sprite-computed-factor);
+  height: calc(48px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.code {
+  background: url($spriteHome) calc(-0px * $sprite-computed-factor)
+    calc(-476px * $sprite-computed-factor) no-repeat;
+  width: calc(64px * $sprite-computed-factor);
+  height: calc(48px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.search {
+  background: url($spriteHome) calc(-0px * $sprite-computed-factor)
+    calc(-524px * $sprite-computed-factor) no-repeat;
+  width: calc(46px * $sprite-computed-factor);
+  height: calc(47px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.transfer {
+  background: url($spriteHome) calc(-46px * $sprite-computed-factor)
+    calc(-524px * $sprite-computed-factor) no-repeat;
+  width: calc(48px * $sprite-computed-factor);
+  height: calc(47px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.banzhuan {
+  background: url($spriteHome) calc(-0px * $sprite-computed-factor)
+    calc(-571px * $sprite-computed-factor) no-repeat;
+  width: calc(51px * $sprite-computed-factor);
+  height: calc(45px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.collectCoin {
+  background: url($spriteHome) calc(-64px * $sprite-computed-factor)
+    calc(-64px * $sprite-computed-factor) no-repeat;
+  width: calc(34px * $sprite-computed-factor);
+  height: calc(44px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.IDCard {
+  background: url($spriteHome) calc(-51px * $sprite-computed-factor)
+    calc(-571px * $sprite-computed-factor) no-repeat;
+  width: calc(56px * $sprite-computed-factor);
+  height: calc(40px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.wallet {
+  background: url($spriteHome) calc(-64px * $sprite-computed-factor)
+    calc(-476px * $sprite-computed-factor) no-repeat;
+  width: calc(41px * $sprite-computed-factor);
+  height: calc(38px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.copy {
+  background: url($spriteHome) calc(-0px * $sprite-computed-factor)
+    calc(-616px * $sprite-computed-factor) no-repeat;
+  width: calc(35px * $sprite-computed-factor);
+  height: calc(35px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.bulletin {
+  background: url($spriteHome) calc(-35px * $sprite-computed-factor)
+    calc(-616px * $sprite-computed-factor) no-repeat;
+  width: calc(45px * $sprite-computed-factor);
+  height: calc(33px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.eye-close {
+  background: url($spriteHome) calc(-0px * $sprite-computed-factor)
+    calc(-651px * $sprite-computed-factor) no-repeat;
+  width: calc(50px * $sprite-computed-factor);
+  height: calc(31px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.eye-open {
+  background: url($spriteHome) calc(-50px * $sprite-computed-factor)
+    calc(-651px * $sprite-computed-factor) no-repeat;
+  width: calc(50px * $sprite-computed-factor);
+  height: calc(31px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.point-expires {
+  background: url($spriteHome) calc(-0px * $sprite-computed-factor)
+    calc(-682px * $sprite-computed-factor) no-repeat;
+  width: calc(31px * $sprite-computed-factor);
+  height: calc(29px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.close-dark {
+  background: url($spriteHome) calc(-80px * $sprite-computed-factor)
+    calc(-616px * $sprite-computed-factor) no-repeat;
+  width: calc(28px * $sprite-computed-factor);
+  height: calc(28px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.close-white {
+  background: url($spriteHome) calc(-31px * $sprite-computed-factor)
+    calc(-682px * $sprite-computed-factor) no-repeat;
+  width: calc(28px * $sprite-computed-factor);
+  height: calc(28px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.checked-in {
+  background: url($spriteHome) calc(-59px * $sprite-computed-factor)
+    calc(-682px * $sprite-computed-factor) no-repeat;
+  width: calc(42px * $sprite-computed-factor);
+  height: calc(28px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.arrow-right-gray {
+  background: url($spriteHome) calc(-90px * $sprite-computed-factor)
+    calc(-0px * $sprite-computed-factor) no-repeat;
+  width: calc(13px * $sprite-computed-factor);
+  height: calc(23px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.arrow-right {
+  background: url($spriteHome) calc(-90px * $sprite-computed-factor)
+    calc(-23px * $sprite-computed-factor) no-repeat;
+  width: calc(13px * $sprite-computed-factor);
+  height: calc(23px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.buyCoin {
+  background: url($spriteHome) calc(-0px * $sprite-computed-factor)
+    calc(-711px * $sprite-computed-factor) no-repeat;
+  width: calc(42px * $sprite-computed-factor);
+  height: calc(19px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}
+.sellCoin {
+  background: url($spriteHome) calc(-42px * $sprite-computed-factor)
+    calc(-711px * $sprite-computed-factor) no-repeat;
+  width: calc(43px * $sprite-computed-factor);
+  height: calc(19px * $sprite-computed-factor);
+  background-size: $sprite-home-background-size;
+}

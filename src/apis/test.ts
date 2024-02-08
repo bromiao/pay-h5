@@ -7,7 +7,7 @@ export interface ICustomType {
 }
 
 export const testAPI = (id: string) =>
-  request.get<ICustomType>(
+  request.post<ICustomType>(
     `/todos/${id}`,
     {},
     {

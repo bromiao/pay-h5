@@ -1,0 +1,519 @@
+* {
+  margin: 0;
+  vertical-align: middle;
+}
+.selfSelect {
+  &.selfSelect-wide-mode {
+    .selectList {
+      height: calc(1 / var(--scale-factor) * 37px) !important;
+      flex: 0 0 calc(1 / var(--scale-factor) * 37px) !important;
+      line-height: 37px;
+      font-size: 18px;
+    }
+    .O_wrap {
+      height: calc(100% - 82px) !important;
+    }
+    .buyList {
+      width: 100%;
+      height: 70px !important;
+      margin-bottom: 12px;
+      padding: 0 18px 0 15px;
+      .contentText {
+        font-size: 18px;
+        .mixinNum {
+          font-size: 18px;
+        }
+      }
+
+      .content-container {
+        flex-wrap: nowrap;
+        > .flex_s {
+          flex: 1;
+        }
+      }
+      .coin-amount {
+        &.amountMoney {
+          justify-content: flex-start !important;
+        }
+      }
+      .col-middle {
+        margin: 0 !important;
+        margin-left: 25px !important;
+        .SZRMB {
+          width: 27px;
+          height: 27px;
+        }
+      }
+      .col-right {
+        flex: 0 0 120px !important;
+      }
+      .buyButton {
+        transform-origin: 0 0;
+        // transform: scaleX(var(--scale-factor));
+        width: calc(1 / var(--scale-factor) * 113px);
+        height: 34px;
+        line-height: 34px;
+        font-size: 18px;
+      }
+      .unit {
+        margin-bottom: -3px !important;
+        font-size: 18px !important;
+      }
+    }
+    :deep(.van-action-sheet) {
+      height: calc(1 / var(--scale-factor) * 300px) !important;
+      .van-action-sheet__header {
+        height: calc(1 / var(--scale-factor) * 50px);
+        line-height: calc(1 / var(--scale-factor) * 50px);
+        font-size: 25px;
+      }
+      .van-action-sheet__close {
+        line-height: calc(1 / var(--scale-factor) * 50px);
+      }
+    }
+    .filterContent {
+      padding-bottom: 20px;
+      .Ftitle {
+        font-size: 20px;
+      }
+      .paymate {
+        justify-content: flex-start;
+        .van-col {
+          display: flex;
+          width: calc(1 / var(--scale-factor) * 70px);
+          height: 53px;
+          margin-right: 20px;
+          padding: 6px 0;
+          .payAll {
+            line-height: 53px;
+            font-size: 18px;
+          }
+          p {
+            // margin-top: 10px;
+            font-size: 12px;
+            line-height: unset;
+          }
+          .credit {
+            margin: 0 auto;
+            width: 35px;
+            height: 20px;
+          }
+          .alipay {
+            margin: 0 auto;
+            width: 25px;
+            height: 25px;
+          }
+          .WeChatPay {
+            margin: 0 auto;
+            width: 30px;
+            height: 25px;
+          }
+        }
+      }
+      .pays {
+        .van-col {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 90px;
+          height: 53px;
+          line-height: 53px;
+          font-size: 16px;
+          &.paysAction {
+            font-size: 18px;
+          }
+        }
+      }
+      .amount {
+        justify-content: flex-start;
+        .van-col {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 70px;
+          height: 53px;
+          flex: 1;
+          line-height: 53px;
+          margin-right: 20px;
+          margin-bottom: 0;
+          font-size: 15px;
+          &.amountAction {
+            font-size: 18px;
+          }
+        }
+      }
+      .btn-filter-container {
+        width: 430px;
+        .reset,
+        .Confirm {
+          height: 50px;
+          margin-top: 35px;
+          font-size: 20px;
+        }
+      }
+    }
+
+    :deep(.van-pull-refresh) {
+      .van-list__loading,
+      .van-list__finished-text,
+      .van-list__error-text {
+        --van-list-text-font-size: 18px;
+        --van-list-text-line-height: 50px;
+      }
+    }
+  }
+  .selectList {
+    font-family: MicrosoftYaHei;
+    font-size: 22.2px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 28.3px;
+    letter-spacing: 0px;
+    color: #8c8b8c;
+    //margin-top: -45px;
+    z-index: 1;
+    position: relative;
+    //margin-bottom: 40px;
+    i {
+      vertical-align: baseline;
+      margin-left: 3.5px;
+      margin-right: 10px;
+    }
+    .select {
+      display: block;
+      float: right;
+    }
+    > span {
+      padding-bottom: 40px;
+      &.active {
+        color: var(--van-button-primary-background);
+        :deep(.van-icon) {
+          transform: rotate(180deg);
+          transition: transform 0.3s;
+        }
+      }
+    }
+  }
+  .O_wrap {
+    :deep(.van-pull-refresh) {
+      overflow: auto;
+      width: 100%;
+    }
+  }
+  .buyList {
+    padding: 33px 34px;
+    width: 100%;
+    height: 202px;
+    background-color: #ffffff;
+    border-radius: 13.9px;
+    margin-bottom: 20px;
+    .content-container {
+      width: 100%;
+      height: 100%;
+      flex-wrap: nowrap;
+      > .van-col {
+        display: flex;
+        // flex-direction: column;
+        justify-content: space-between;
+      }
+      .col-left {
+        flex: 0 0 200px;
+        white-space: nowrap;
+      }
+      .col-middle {
+        margin-left: 50px;
+        margin-right: auto;
+      }
+      .col-right {
+        // justify-content: center;
+      }
+      .van-col {
+        height: 100%;
+      }
+    }
+    .user-info-container {
+      height: 68px;
+      margin-bottom: 20px;
+    }
+    .avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .userName {
+      width: 136px;
+      // height: 68px;
+      font-family: MicrosoftYaHei;
+      font-size: 25px;
+      font-weight: 400;
+      font-stretch: normal;
+      letter-spacing: 0px;
+      color: #3f3f3f;
+      margin-left: 8px;
+      line-height: normal;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+    .usert {
+      font-family: MicrosoftYaHei;
+      font-size: 21px;
+      font-weight: normal;
+      font-stretch: normal;
+      height: 22px;
+      line-height: 22px;
+      letter-spacing: 0px;
+      color: #a6a6a6;
+    }
+    .contentText {
+      height: 45px;
+      // line-height: 68px;
+      font-family: MicrosoftYaHei;
+      font-size: 21px;
+      font-weight: normal;
+      font-stretch: normal;
+      letter-spacing: 0px;
+      color: #5cc300;
+      text-align: center;
+      .mixinNum {
+        color: #a6a6a6;
+        font-size: 21px;
+        font-weight: normal;
+        font-stretch: normal;
+        letter-spacing: 0px;
+        text-align: center;
+      }
+    }
+    .pay-way-container {
+      height: 55px;
+      .payBox {
+        display: flex;
+        align-items: center;
+      }
+    }
+    .credit {
+      width: 32.6px;
+      height: 25.7px;
+    }
+    .alipay {
+      width: 27.8px;
+      height: 27.1px;
+    }
+    .WeChatPay {
+      width: 32.6px;
+      height: 29.2px;
+    }
+    .SZRMB {
+      width: 25.7px;
+      height: 25.7px;
+    }
+    .amountMoney {
+      height: 68px;
+      // line-height: 68px;
+      font-family: MicrosoftYaHei-Bold;
+      font-size: 33px;
+      font-weight: 600;
+      letter-spacing: 0px;
+      color: #3f3f3f;
+      text-align: center;
+      .unit {
+        font-family: MicrosoftYaHei;
+        font-size: 21px;
+        font-weight: normal;
+        font-stretch: normal;
+        letter-spacing: 0px;
+        color: #a6a6a6;
+        display: inline-block;
+        margin-left: 6px;
+        margin-bottom: -6px;
+      }
+    }
+    .buyButton {
+      display: block;
+      margin: 0 auto;
+      width: 166.7px;
+      height: 55px;
+      line-height: 55px;
+      // flex: 0 0 55px;
+      // background-color: var(--van-button-primary-background);
+      border-radius: 6.9px;
+      font-family: MicrosoftYaHei;
+      font-size: 25px;
+      font-weight: normal;
+      font-stretch: normal;
+      letter-spacing: 0px;
+      // color: #ffffff;
+    }
+  }
+  .filterContent {
+    padding: 0 40px 100px;
+    background-color: #ffffff;
+    border-radius: 20.8px 20.8px 0px 0px;
+    .Ftitle {
+      font-family: MicrosoftYaHei;
+      font-size: 27.8px;
+      font-weight: 400;
+      font-stretch: normal;
+      line-height: 33.3px;
+      letter-spacing: 0px;
+      color: #13161b;
+      padding: 20px 0;
+    }
+    .paymate {
+      .van-col {
+        width: 120px;
+        // width: 150px;
+        height: 106.9px;
+        background-color: #ebf1f6;
+        border-radius: 6.9px;
+        text-align: center;
+        .payAll {
+          line-height: 106.9px;
+          font-family: MicrosoftYaHei;
+          font-size: 25px;
+          font-weight: normal;
+          font-stretch: normal;
+          letter-spacing: 0px;
+          color: #333333;
+        }
+        p {
+          font-family: MicrosoftYaHei;
+          font-size: 25px;
+          font-weight: normal;
+          font-stretch: normal;
+          line-height: 30.3px;
+          letter-spacing: 0px;
+          color: #787f8c;
+        }
+        .credit {
+          margin: 10px auto 13px;
+          display: block;
+          width: 62.5px;
+          height: 48.6px;
+        }
+        .alipay {
+          margin: 10px auto 8px;
+          width: 50px;
+          height: 50px;
+        }
+        .WeChatPay {
+          margin: 8px auto 5px;
+          width: 61.8px;
+          height: 54.2px;
+        }
+      }
+      .van-col.paymateAction {
+        background-color: #ffffff;
+        border-radius: 6.9px;
+        border: solid 2.8px var(--van-button-primary-background);
+      }
+    }
+    .pays {
+      text-align: center;
+      .van-col {
+        width: 150px;
+        height: 106.9px;
+        background-color: #ebf1f6;
+        border-radius: 6.9px;
+        font-family: MicrosoftYaHei;
+        font-size: 25px;
+        font-weight: normal;
+        font-stretch: normal;
+        line-height: 106.9px;
+        letter-spacing: 0px;
+        color: #787f8c;
+        margin-right: 22.2px;
+      }
+      .van-col.paysAction {
+        background-color: #ffffff;
+        border-radius: 6.9px;
+        border: solid 2.8px var(--van-button-primary-background);
+        font-family: MicrosoftYaHei;
+        font-size: 25px;
+        font-weight: normal;
+        font-stretch: normal;
+        letter-spacing: 0px;
+        color: #333333;
+      }
+    }
+    .amount {
+      text-align: center;
+      .van-col {
+        margin-bottom: 25px;
+        width: 205.6px;
+        height: 106.9px;
+        background-color: #ebf1f6;
+        border-radius: 6.9px;
+        font-family: MicrosoftYaHei;
+        font-size: 25px;
+        font-weight: normal;
+        font-stretch: normal;
+        line-height: 106.9px;
+        letter-spacing: 0px;
+        color: #787f8c;
+      }
+      .van-col.amountAction {
+        background-color: #ffffff;
+        border-radius: 6.9px;
+        border: solid 2.8px var(--van-button-primary-background);
+        color: #333333;
+      }
+    }
+    .reset {
+      margin-top: 40px;
+      height: 79.9px;
+      background-color: #828282;
+      border-radius: 6.9px;
+      font-family: MicrosoftYaHei;
+      font-size: 30.6px;
+      font-weight: normal;
+      font-stretch: normal;
+      line-height: 21.7px;
+      letter-spacing: 0px;
+      color: #ffffff;
+      border-color: #828282;
+    }
+    .Confirm {
+      margin-top: 40px;
+      height: 79.9px;
+      background-color: var(--van-button-primary-background);
+      border-radius: 6.9px;
+      font-family: MicrosoftYaHei;
+      font-size: 30.6px;
+      font-weight: normal;
+      font-stretch: normal;
+      line-height: 21.7px;
+      letter-spacing: 0px;
+      color: #ffffff;
+    }
+  }
+  :deep(.van-action-sheet__header) {
+    height: 90px;
+    font-family: MicrosoftYaHei-Bold;
+    font-size: 29.2px;
+    font-weight: 600;
+    font-stretch: normal;
+    line-height: 90px;
+    letter-spacing: 0px;
+    color: #13161b;
+    .van-action-sheet__close {
+      color: #230503;
+      font-size: 29.2px;
+      line-height: 90px;
+    }
+  }
+  // .paymate_p {
+  //   display: block;
+  // }
+  // .payBox {
+  //   float: left;
+  //   margin-right: 20px;
+  // }
+  // .payBox:nth-child(3n) {
+  //   margin-right: 0;
+  // }
+}

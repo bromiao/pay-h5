@@ -1,0 +1,58 @@
+$spriteHome: "@/assets/images/sprites-home.png";
+
+.tabbar-home {
+  background: url($spriteHome) calc(-0rem * var(--sprite-computed-factor))
+    calc(-110rem * var(--sprite-computed-factor)) no-repeat;
+  width: calc(54rem * var(--sprite-computed-factor));
+  height: calc(54rem * var(--sprite-computed-factor));
+  background-size: var(--sprite-home-background-size);
+}
+.tabbar-home-active {
+  background: url($spriteHome) calc(-54rem * var(--sprite-computed-factor))
+    calc(-56rem * var(--sprite-computed-factor)) no-repeat;
+  width: calc(54rem * var(--sprite-computed-factor));
+  height: calc(54rem * var(--sprite-computed-factor));
+  background-size: var(--sprite-home-background-size);
+}
+.tabbar-points {
+  background: url($spriteHome) calc(-0rem * var(--sprite-computed-factor))
+    calc(-316rem * var(--sprite-computed-factor)) no-repeat;
+  width: calc(53rem * var(--sprite-computed-factor));
+  height: calc(48rem * var(--sprite-computed-factor));
+  background-size: var(--sprite-home-background-size);
+}
+.tabbar-points-active {
+  background: url($spriteHome) calc(-54rem * var(--sprite-computed-factor))
+    calc(-164rem * var(--sprite-computed-factor)) no-repeat;
+  width: calc(54rem * var(--sprite-computed-factor));
+  height: calc(54rem * var(--sprite-computed-factor));
+  background-size: var(--sprite-home-background-size);
+}
+.tabbar-order {
+  background: url($spriteHome) calc(-48rem * var(--sprite-computed-factor))
+    calc(-268rem * var(--sprite-computed-factor)) no-repeat;
+  width: calc(48rem * var(--sprite-computed-factor));
+  height: calc(48rem * var(--sprite-computed-factor));
+  background-size: var(--sprite-home-background-size);
+}
+.tabbar-order-active {
+  background: url($spriteHome) calc(-0rem * var(--sprite-computed-factor))
+    calc(-164rem * var(--sprite-computed-factor)) no-repeat;
+  width: calc(54rem * var(--sprite-computed-factor));
+  height: calc(54rem * var(--sprite-computed-factor));
+  background-size: var(--sprite-home-background-size);
+}
+.tabbar-mine {
+  background: url($spriteHome) calc(-0rem * var(--sprite-computed-factor))
+    calc(-268rem * var(--sprite-computed-factor)) no-repeat;
+  width: calc(48rem * var(--sprite-computed-factor));
+  height: calc(48rem * var(--sprite-computed-factor));
+  background-size: var(--sprite-home-background-size);
+}
+.tabbar-mine-active {
+  background: url($spriteHome) calc(-54rem * var(--sprite-computed-factor))
+    calc(-110rem * var(--sprite-computed-factor)) no-repeat;
+  width: calc(54rem * var(--sprite-computed-factor));
+  height: calc(54rem * var(--sprite-computed-factor));
+  background-size: var(--sprite-home-background-size);
+}

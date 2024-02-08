@@ -1,0 +1,30 @@
+.gdpay-comp-slider-wrapper {
+
+}
+.gdpay-com-slider {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background: #e9eff5;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.gdpay-com-slider-bar {
+  position: absolute;
+  max-width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #f59d13;
+  border-radius: inherit;
+}
+.gdpay-com-slider-button {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  border: 4px solid #fff;
+  right: -16px;
+  top: -8px;
+  border-radius: 50%;
+  background: #f59d13;
+}

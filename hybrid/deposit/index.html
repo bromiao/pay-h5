@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+  <meta charset="UTF-8" />
+  <title>GDpay - 充值</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+  />
+</head>
+<body>
+<div class="deposit-container">
+  <div class="mini-wallet">
+    <img alt="logo" src="../assets/images/brand-logo.png" class="mini-wallet__icon" />
+    <div class="mini-wallet__middle">
+      <div class="mini-wallet__balance">
+        <strong>49.3</strong>
+        <span>GDB</span>
+      </div>
+      <div class="mini-wallet__description">
+        如何获得更多GDB币：请点击右侧【购买GDB】，在新开的GDpay
+        页面中点击【购买】，交易成功后即可获得
+      </div>
+    </div>
+
+    <div class="mini-wallet__extra">
+      <button id="buy-button" class="mini-wallet-button mini-wallet-button--gold">
+        购买GDB
+      </button>
+    </div>
+  </div>
+  <section class="main-content">
+    <ul class="amount-tab">
+      <li class="amount-tab__item" data-value="50">
+        <div class="currency-tab">50<span>GDB</span></div>
+      </li>
+      <li class="amount-tab__item" data-value="100">
+        <div class="currency-tab">100<span>GDB</span></div>
+      </li>
+      <li class="amount-tab__item" data-value="150">
+        <div class="currency-tab">150<span>GDB</span></div>
+      </li>
+      <li class="amount-tab__item" data-value="200">
+        <div class="currency-tab">200<span>GDB</span></div>
+      </li>
+      <li class="amount-tab__item" data-value="300">
+        <div class="currency-tab">300<span>GDB</span></div>
+      </li>
+      <li class="amount-tab__item" data-value="500">
+        <div class="currency-tab">500<span>GDB</span></div>
+      </li>
+      <li class="amount-tab__item" data-value="800">
+        <div class="currency-tab">800<span>GDB</span></div>
+      </li>
+      <li class="amount-tab__item" data-value="1000">
+        <div class="currency-tab">1000<span>GDB</span></div>
+      </li>
+      <li class="amount-tab__item" data-value="1500">
+        <div class="currency-tab">1500<span>GDB</span></div>
+      </li>
+      <li class="amount-tab__item" data-value="2000">
+        <div class="currency-tab">2000<span>GDB</span></div>
+      </li>
+      <li class="amount-tab__item" data-value="3000">
+        <div class="currency-tab">3000<span>GDB</span></div>
+      </li>
+      <li class="amount-tab__item" data-value="4000">
+        <div class="currency-tab">4000<span>GDB</span></div>
+      </li>
+    </ul>
+    <div class="amount-field">
+      <label class="amount-field__label">自定义充值金额</label>
+      <div class="amount-field__input">
+        <input id="amount-input" placeholder="请输入自定义充值金额，最低50GDB" />
+      </div>
+    </div>
+    <div class="real-amount">
+      <label>实际到账金额:</label>
+      <strong>100.00</strong>
+      <div class="real-amount__tutorial">
+        <img alt="tooltip" src="../assets/images/icon-question.png" />
+        <div class="real-amount__tutorial__tooltip">
+          实际到账：指充值GDB到
+          游戏钱包的实际加币金额
+          1GDB=1人民币
+        </div>
+      </div>
+    </div>
+    <div class="submit-button">
+      <button id="submit-button">立即充值</button>
+    </div>
+  </section>
+</div>
+<script type="module" src="/hybrid/deposit/index.ts"></script>
+</body>
+</html>
